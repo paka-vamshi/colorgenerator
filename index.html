@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color G</title>
+</head>
+<style>
+    body{
+        background-color: green;
+        text-align: center;
+    }
+    button{
+        margin-top: 19em;
+        height: 40px;
+        color: black;
+    }
+</style>
+<body>
+    <button>Get Colors</button>
+    <script>
+        let button = document.querySelector("button")
+        let body = document.querySelector("body")
+        button.addEventListener("click",function(){
+            let r = (Math.floor(Math.random() *256));
+            let g = (Math.floor(Math.random() *256));
+            let b = (Math.floor(Math.random() *256));
+            body.style.backgroundColor = `rgb(${r},${g},${b})`
+        })
+    </script>
+</body>
+</html>
